@@ -1,0 +1,63 @@
+package polymorphism;
+
+abstract class Worker
+{
+	String name;
+	float salary_rate;
+	String worker(String type)
+	{
+		if(type.contains("hourly"))
+		{
+			Worker obj=new HourlyWorker();
+		}
+		if(type.contains("salaried"))
+		{
+			Worker obj=new SalariedWorker();
+			
+		}
+		return null;
+	}
+	abstract int computepay(int hours,int pay);
+	
+}
+
+class HourlyWorker extends Worker
+{
+	
+	int pay;
+	int computepay(int hours,int pay)
+	{
+		if(hours>40)
+		{
+		int excess = ((hours-40)*pay)/2;
+		super.salary_rate=hours*pay+excess;
+		return (int) salary_rate;
+	    }
+		else
+		{
+		super.salary_rate=40*pay;
+		return (int) salary_rate;
+		}
+	
+}
+}
+class SalariedWorker extends Worker
+{
+	float salary_rate;
+	int computepay(int hours, int pay)
+	{
+		super.salary_rate=40*pay;
+		return (int) salary_rate;
+	}
+	
+}
+
+public class testworker
+{
+	public static void main(String[] args)
+	{
+		Worker obj= new Worker();
+			
+	}
+}
+

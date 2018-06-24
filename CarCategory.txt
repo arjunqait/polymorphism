@@ -1,0 +1,58 @@
+package polymorphism;
+import java.util.Scanner;
+
+public class CarCategory {
+	String carmodel(String category)
+	{
+		String suv ="tata safari";
+		String sedan ="tata indigo";
+	    String economy ="tata indica";
+	    String mini ="tata nano";
+	    String choice="Wrong Choice";
+	    if(category.contains("suv")||category.contains("SUV"))
+	    {
+	    	return suv;
+	    }
+	    if(category.contains("sedan")||category.contains("SEDAN"))
+	    {
+	    	return sedan;
+	    }
+	    if(category.contains("economy")||category.contains("ECONOMY"))
+	    {
+	    	return economy;
+	    }
+	    if(category.contains("mini")||category.contains("MINI"))
+	    {
+	    	return mini;
+	    }
+		
+	    else return choice;
+	    
+	    
+	}
+	
+	public static void main(String[] args)
+	{
+		String category, carname;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("choose the category of car among :");
+		System.out.print("SUV");
+		System.out.print(" SEDAN");
+		System.out.print(" ECONOMY");
+		System.out.print(" MINI");
+		
+		category=sc.nextLine();
+		CarCategory obj= new CarCategory();
+		carname=obj.carmodel(category);
+		
+		
+		System.out.println("the car name is: " +carname);
+		
+		
+		
+		
+		
+		
+	}
+
+}

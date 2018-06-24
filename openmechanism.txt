@@ -1,0 +1,29 @@
+package polymorphism;
+import java.util.Scanner;
+
+public class openmechanism {
+	
+	 void open(int door, int window, int account)
+	 {
+		 System.out.println("Door open with the value " +door);
+		 System.out.println("window open with the value " +window);
+		 System.out.println("account open with the value " +account);
+	 }
+
+	public static void main(String[] args) {
+		int window,door,account;
+		Scanner sc=new Scanner(System.in);
+		openmechanism obj= new openmechanism();
+		System.out.print("give serial number for door ");
+		door=sc.nextInt();
+		System.out.print("give serial number for window ");
+		window=sc.nextInt();
+		System.out.print("give serial number for account ");
+		account=sc.nextInt();
+		
+		
+        obj.open(door,window,account);		
+
+	}
+
+}

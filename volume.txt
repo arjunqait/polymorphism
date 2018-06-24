@@ -1,0 +1,58 @@
+package polymorphism;
+import java.util.Scanner;
+public class Volume {
+	
+	
+	int volume(int l,int b, int h)
+	{
+	return (l*b*h);
+	}
+	float volume(int r, int h)
+	{
+	return (float) (3.14*r*r*h);
+	}
+	int volume(int side)
+	{
+	return (side*side*side);
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		int s,l,b,r,h;
+		String entity;
+		Scanner sc= new Scanner(System.in);
+		Volume obj= new Volume();
+		System.out.println("enter the shape to calculate volume");
+		entity=sc.nextLine();
+		if(entity.contains("cube")||entity.contains("CUBE"))
+		{
+			System.out.println("enter side of cube");
+			s=sc.nextInt();
+			int volume=obj.volume(s);
+			System.out.println("volume of cube "+volume);
+		}
+		
+		if(entity.contains("rectangle")||entity.contains("RECTANGLE"))
+		{
+			System.out.println("enter sides of rectangle");
+			l=sc.nextInt();
+			b=sc.nextInt();
+			h=sc.nextInt();
+			int volume=obj.volume(l,b,h);
+			System.out.println("volume of cube "+volume);
+		}
+		if(entity.contains("cube")||entity.contains("CUBE"))
+		{
+			System.out.println("enter sides of cylinder");
+			r=sc.nextInt();
+			h=sc.nextInt();
+			int volume=(int) obj.volume(r,h);
+			System.out.println("volume of cube "+volume);
+		}
+		
+	   
+	 }
+	}
+
+

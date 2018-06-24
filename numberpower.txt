@@ -1,0 +1,30 @@
+package polymorphism;
+ import java.util.Scanner;
+ import java.math.*;
+ 
+public class numberpower 
+{
+
+int power(int a,int b)
+{
+ 	int result=(int) Math.pow(a,b);
+    return result; 
+}
+ public static void main(String[] args)	
+{
+	int a;
+	int b;
+
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter the value of a");
+	a=sc.nextInt();
+	System.out.println("Enter the value of b"); 
+    b=sc.nextInt();
+	    
+	numberpower obj= new numberpower();
+ 	int result=obj.power(a,b);
+ 	System.out.print("result is "+ result);
+}
+
+	
+}
